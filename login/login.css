@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fundo-claro: #fff7f0;
+    --fundo-bege: #f3ece1;
+    --azul-escuro: #12385b;
+    --azul-pata: #7a8d9c;
+    --amarelo: #e8b93a;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: var(--azul-escuro);
+    background-color: var(--fundo-claro);
+}
+
+/* ---------- Layout principal (desktop: 2 colunas) ---------- */
+.login_container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.login_boasvindas,
+.login_formulario {
+    width: 50%;
+}
+
+/* ---------- Lado esquerdo ---------- */
+.login_boasvindas {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--fundo-bege);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.voltar {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    font-size: 24px;
+    color: var(--azul-escuro);
+    text-decoration: none;
+}
+
+.texto_boasvindas {
+    max-width: 320px;
+}
+
+.texto_boasvindas h1 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.texto_boasvindas p {
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 0 20px;
+}
+
+/* Patas decorativas */
+.pata {
+    position: absolute;
+    fill: var(--azul-pata);
+}
+
+.pata_topo {
+    top: 20px;
+    right: 20px;
+    width: 70px;
+}
+
+.pata_baixo {
+    bottom: -40px;
+    left: -30px;
+    width: 220px;
+}
+
+/* ---------- Lado direito ---------- */
+.login_formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+}
+
+.login_formulario h2 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+form {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--fundo-bege);
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--azul-escuro);
+}
+
+input::placeholder {
+    color: #7d7d7d;
+}
+
+input:focus {
+    outline: 2px solid var(--azul-escuro);
+}
+
+button {
+    margin-top: 16px;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--azul-escuro);
+    color: var(--amarelo);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+
+/* RODAPÉ */
+footer {
+    background-color: #f9e9d8;
+    padding: 30px 0;
+}
+
+.footer_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+footer img {
+    width: 50px;
+    height: 50px;
+    background-color: #1c2b4a; /* espaço da logo */
+}
+
+footer span {
+    font-size: 14px;
+}
+
+.nav_footer {
+    display: flex;
+    gap: 16px;
+}
+
+
+
+/* ---------- Celular (até 768px): colunas viram uma embaixo da outra ---------- */
+@media (max-width: 768px) {
+    .login_container {
+        flex-direction: column;
+    }
+
+    .login_boasvindas,
+    .login_formulario {
+        width: 100%;
+    }
+
+    .login_boasvindas {
+        padding: 90px 24px 100px;
+        text-align: center;
+    }
+
+    .texto_boasvindas p {
+        padding: 0;
+    }
+
+    .pata_topo {
+        width: 50px;
+    }
+
+    .pata_baixo {
+        width: 130px;
+        bottom: -25px;
+        left: -20px;
+    }
+
+    .login_formulario {
+        flex: 1;
+        padding: 48px 24px;
+        gap: 32px;
+    }
+}

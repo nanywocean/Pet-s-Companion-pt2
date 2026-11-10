@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Pet's Companion</title>
+    <link rel="stylesheet" href="login.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="login_container">
+
+        <!-- Lado esquerdo: boas-vindas -->
+        <section class="login_boasvindas">
+            <a href="index.html" class="voltar" aria-label="Voltar">&larr;</a>
+
+            <!-- Pata decorativa (topo direito) -->
+            <svg class="pata pata_topo" viewBox="0 0 100 100" aria-hidden="true">
+                <ellipse cx="14" cy="38" rx="9" ry="12" />
+                <ellipse cx="36" cy="18" rx="9" ry="12" />
+                <ellipse cx="64" cy="18" rx="9" ry="12" />
+                <ellipse cx="86" cy="38" rx="9" ry="12" />
+                <path d="M50 42c-20 0-34 18-34 34 0 12 10 16 22 14 8-1 12-3 12-3s4 2 12 3c12 2 22-2 22-14 0-16-14-34-34-34z" />
+            </svg>
+
+            <div class="texto_boasvindas">
+                <h1>Seja bem-vindo ao Pet´s Companion!</h1>
+                <p>Crie uma conta para iniciar ou entre com uma conta existente.</p>
+            </div>
+
+            <!-- Pata decorativa (canto inferior esquerdo) -->
+            <svg class="pata pata_baixo" viewBox="0 0 100 100" aria-hidden="true">
+                <ellipse cx="14" cy="38" rx="9" ry="12" />
+                <ellipse cx="36" cy="18" rx="9" ry="12" />
+                <ellipse cx="64" cy="18" rx="9" ry="12" />
+                <ellipse cx="86" cy="38" rx="9" ry="12" />
+                <path d="M50 42c-20 0-34 18-34 34 0 12 10 16 22 14 8-1 12-3 12-3s4 2 12 3c12 2 22-2 22-14 0-16-14-34-34-34z" />
+            </svg>
+        </section>
+
+        <!-- Lado direito: formulário -->
+        <section class="login_formulario">
+            <h2>Login</h2>
+
+            <form action="" method="post">
+                <input type="text" name="usuario" placeholder="Nome de usuário ou e-mail" required>
+                <input type="password" name="senha" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="home_container footer_container">
+            <img src="../img/logo.svg" alt="logo Pet's Companion">
+            <span>© 2026 Pet's Companion. Cuidado e carinho para o seu pet.</span>
+            <nav class="nav_footer">
+                <a href="">Sobre nós</a>
+                <a href="">Contato</a>
+            </nav>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

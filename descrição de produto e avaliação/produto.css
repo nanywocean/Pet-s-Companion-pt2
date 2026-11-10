@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #fff4ea;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.titulo_oculto {
+    position: absolute;
+    left: -9999px;
+}
+
+.produto_container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ---------- PRODUTO ---------- */
+
+.produto {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.produto_imagem {
+    width: 45%;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.produto_info {
+    flex: 1;
+}
+
+.produto_info h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.produto_estrelas {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.estrelas {
+    color: #f2b01e;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.estrelas_pequenas {
+    font-size: 12px;
+    display: block;
+}
+
+.qtd_avaliacoes {
+    font-size: 12px;
+    color: #555;
+}
+
+.produto_preco {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.produto_parcelas {
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+.produto_descricao {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.botao_carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #efb93b;
+    color: #222;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.botao_carrinho:hover {
+    background-color: #e0a622;
+}
+
+.botao_carrinho svg {
+    width: 16px;
+    height: 16px;
+    fill: #222;
+}
+
+/* ---------- AVALIAÇÕES ---------- */
+
+.avaliacoes {
+    padding-top: 10px;
+}
+
+.avaliacoes h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.avaliacoes_conteudo {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.lista_avaliacoes {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card_avaliacao {
+    background-color: #f6eadf;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.avaliacao_topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.avaliacao_usuario {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.avatar {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.nome_usuario {
+    display: block;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.avaliacao_data {
+    font-size: 10px;
+    color: #555;
+}
+
+.card_avaliacao h3 {
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.card_avaliacao p {
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.nota_media {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 14px;
+    text-align: center;
+    min-width: 120px;
+}
+
+.nota_titulo {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.nota_valor {
+    display: block;
+    font-size: 10px;
+    margin: 4px 0 8px;
+}
+
+.nota_media .estrelas {
+    font-size: 16px;
+}
+
+/* ---------- RESPONSIVO (CELULAR) ---------- */
+
+@media (max-width: 768px) {
+
+    .produto_container {
+        padding: 24px 16px;
+    }
+
+    /* produto: imagem em cima, informações embaixo */
+    .produto {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .produto_imagem {
+        width: 100%;
+        max-height: 380px;
+    }
+
+    .produto_info {
+        width: 100%;
+    }
+
+    .produto_info h2 {
+        font-size: 22px;
+    }
+
+    .produto_descricao {
+        font-size: 13px;
+    }
+
+    .botao_carrinho {
+        width: 100%;
+        padding: 14px;
+        font-size: 13px;
+    }
+
+    /* avaliações: nota média vai para cima da lista */
+    .avaliacoes_conteudo {
+        flex-direction: column-reverse;
+        gap: 16px;
+    }
+
+    .nota_media {
+        width: 100%;
+    }
+
+    .lista_avaliacoes {
+        width: 100%;
+    }
+
+    .card_avaliacao p {
+        font-size: 12px;
+    }
+}

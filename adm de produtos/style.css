@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #fff4ea;
+    color: #0b2248;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.titulo_oculto {
+    position: absolute;
+    left: -9999px;
+}
+
+/* ---------- CONTAINER ---------- */
+
+.cadastro_container {
+    width: 100%;
+    padding: 20px 14px 32px;
+}
+
+/* ---------- CAMINHO DE NAVEGAÇÃO ---------- */
+
+.cadastro_caminho {
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+/* ---------- CARD ---------- */
+
+.cadastro_card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.cadastro_cabecalho {
+    background-color: #0b2248;
+    padding: 14px;
+    text-align: center;
+}
+
+.cadastro_cabecalho h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* ---------- FORMULÁRIO (tudo em coluna) ---------- */
+
+.cadastro_form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 16px 24px;
+}
+
+/* imagem */
+.coluna_imagem {
+    width: 100%;
+    max-width: 240px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.rotulo {
+    display: block;
+    text-align: left;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.caixa_imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #cccccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.caixa_imagem svg {
+    width: 25%;
+    height: 25%;
+    fill: #888;
+}
+
+.caixa_imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texto_imagem {
+    display: block;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+/* campos */
+.coluna_campos {
+    width: 100%;
+}
+
+.campo {
+    margin-bottom: 14px;
+}
+
+.campo label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+/* 16px nos campos evita o zoom automático do iPhone */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: #0b2248;
+    border: 1.5px solid #0b2248;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #888;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #efb93b;
+}
+
+select {
+    padding: 4px;
+}
+
+select option {
+    padding: 6px 8px;
+}
+
+textarea {
+    resize: vertical;
+    line-height: 1.4;
+    min-height: 140px;
+}
+
+/* avaliação */
+.avaliacao {
+    margin-bottom: 16px;
+}
+
+.estrelas {
+    display: block;
+    color: #e8b23a;
+    font-size: 30px;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.avaliacao_linha {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.avaliacao_linha label {
+    font-size: 15px;
+}
+
+.avaliacao_linha input {
+    width: 82px;
+}
+
+/* botão (tamanho bom para o dedo) */
+.botao_salvar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    padding: 14px;
+    background-color: #efb93b;
+    color: #0b2248;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 30px;
+}
+
+.botao_salvar svg {
+    width: 20px;
+    height: 20px;
+    fill: #0b2248;
+}
+
+/* ---------- CELULARES MUITO PEQUENOS (até 360px) ---------- */
+
+@media (max-width: 360px) {
+    .cadastro_container {
+        padding: 14px 10px 24px;
+    }
+
+    .cadastro_form {
+        padding: 16px 12px 20px;
+    }
+
+    .cadastro_cabecalho h2 {
+        font-size: 18px;
+    }
+
+    .estrelas {
+        font-size: 26px;
+    }
+}

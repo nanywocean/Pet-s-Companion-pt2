@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Novo Produto - Pet's Companion</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <main>
+        <h1 class="titulo_oculto">Página de cadastro de produtos</h1>
+
+        <section class="cadastro_container">
+
+            <!-- CAMINHO DE NAVEGAÇÃO -->
+            <nav class="cadastro_caminho">
+                <a href="">Início</a> /
+                <a href="">Administração</a> /
+                <span>Cadastro</span>
+            </nav>
+
+            <div class="cadastro_card">
+                <div class="cadastro_cabecalho">
+                    <h2>Cadastrar Novo Produto</h2>
+                </div>
+
+                <form class="cadastro_form" action="" method="post">
+
+                    <!-- COLUNA DA IMAGEM -->
+                    <div class="coluna_imagem">
+                        <span class="rotulo">Imagem do Produto</span>
+
+                        <label for="imagem" class="caixa_imagem">
+                            <img id="previa" src="" alt="Prévia da imagem do produto" hidden>
+                            <svg id="icone_camera" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                                <path
+                                    d="M213.1 128.8L202.7 160L128 160C92.7 160 64 188.7 64 224L64 480C64 515.3 92.7 544 128 544L512 544C547.3 544 576 515.3 576 480L576 224C576 188.7 547.3 160 512 160L437.3 160L426.9 128.8C420.4 109.2 402.1 96 381.4 96L258.6 96C237.9 96 219.6 109.2 213.2 128.8zM320 256C373 256 416 299 416 352C416 405 373 448 320 448C267 448 224 405 224 352C224 299 267 256 320 256z" />
+                            </svg>
+                        </label>
+                        <input type="file" id="imagem" name="imagem" accept="image/*" hidden>
+
+                        <label for="imagem" class="texto_imagem">Adicionar imagem</label>
+                    </div>
+
+                    <!-- COLUNA DOS CAMPOS -->
+                    <div class="coluna_campos">
+
+                        <div class="campo">
+                            <label for="nome">Nome do Produto</label>
+                            <input type="text" id="nome" name="nome" placeholder="Ração Natural..." required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="preco">Preço (R$)</label>
+                            <input type="number" id="preco" name="preco" placeholder="0,00" step="0.01" min="0"
+                                required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="categoria">Categoria</label>
+                            <select id="categoria" name="categoria" size="3">
+                                <option value="alimentos" selected>Alimentos</option>
+                                <option value="brinquedos">Brinquedos</option>
+                                <option value="camas">Camas</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="descricao">Descrição Detalhada</label>
+                            <textarea id="descricao" name="descricao" rows="8"
+                                placeholder="Ingredientes selecionados: ...&#10;Alta digestibilidade: ...&#10;Rico em Ômega 3 e 6: ...&#10;Sem corantes: ..."></textarea>
+                        </div>
+
+                        <div class="avaliacao">
+                            <span class="estrelas">★★★★★</span>
+                            <div class="avaliacao_linha">
+                                <label for="avaliacao">Atribuir Avaliação Média (Opcional)</label>
+                                <input type="number" id="avaliacao" name="avaliacao" placeholder="1" min="1" max="5">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="botao_salvar">
+                            salvar cadastro
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                                <path
+                                    d="M128 128L128 512L512 512L512 237.3L402.7 128L128 128zM96 128C96 110.3 110.3 96 128 96L402.7 96C411.2 96 419.3 99.4 425.3 105.4L534.6 214.7C540.6 220.7 544 228.8 544 237.3L544 512C544 529.7 529.7 544 512 544L128 544C110.3 544 96 529.7 96 512L96 128zM192 128L192 224L384 224L384 128L192 128zM320 288C364.2 288 400 323.8 400 368C400 412.2 364.2 448 320 448C275.8 448 240 412.2 240 368C240 323.8 275.8 288 320 288zM320 320C293.5 320 272 341.5 272 368C272 394.5 293.5 416 320 416C346.5 416 368 394.5 368 368C368 341.5 346.5 320 320 320z" />
+                            </svg>
+                        </button>
+
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Mostra a prévia da imagem escolhida
+        const inputImagem = document.getElementById("imagem");
+        const previa = document.getElementById("previa");
+        const icone = document.getElementById("icone_camera");
+
+        inputImagem.addEventListener("change", function () {
+            const arquivo = inputImagem.files[0];
+            if (arquivo) {
+                previa.src = URL.createObjectURL(arquivo);
+                previa.hidden = false;
+                icone.style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
